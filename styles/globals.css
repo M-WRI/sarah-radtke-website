@@ -1,3 +1,55 @@
+@font-face {
+  font-family: "Crimson Pro";
+  src: url("../public/fonts/CrimsonPro-Regular.eot");
+  src: url("../public/fonts/CrimsonPro-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/CrimsonPro-Regular.woff2") format("woff2"),
+    url("../public/fonts/CrimsonPro-Regular.woff") format("woff"),
+    url("../public/fonts/CrimsonPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nacelle";
+  src: url("../public/fonts/Nacelle-SemiBold.eot");
+  src: url("../public/fonts/Nacelle-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Nacelle-SemiBold.woff2") format("woff2"),
+    url("../public/fonts/Nacelle-SemiBold.woff") format("woff"),
+    url("../public/fonts/Nacelle-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nacelle";
+  src: url("../public/fonts/Nacelle-Regular.eot");
+  src: url("../public/fonts/Nacelle-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Nacelle-Regular.woff2") format("woff2"),
+    url("../public/fonts/Nacelle-Regular.woff") format("woff"),
+    url("../public/fonts/Nacelle-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nacelle";
+  src: url("../public/fonts/Nacelle-Bold.eot");
+  src: url("../public/fonts/Nacelle-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Nacelle-Bold.woff2") format("woff2"),
+    url("../public/fonts/Nacelle-Bold.woff") format("woff"),
+    url("../public/fonts/Nacelle-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --primary-color-dark: #cbbb9f;
   --primary-color-light: #cbbb9f;
@@ -5,6 +57,13 @@
   --secondary-color-light: #b4dcf3;
   --black: #3d3d3d;
   --white: #fff;
+  /* Fonts */
+  --headline: "Crimson Pro";
+  --text: "Nacelle";
+}
+
+p {
+  font-family: var(--text);
 }
 
 html,
@@ -22,4 +81,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Crimson Pro";
 }
