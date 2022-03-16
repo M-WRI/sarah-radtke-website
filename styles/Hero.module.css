@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.imageContainer {
+  width: 90vw;
+  height: 75vh;
+  background: var(--demo-image-color);
+}
