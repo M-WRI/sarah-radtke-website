@@ -1,12 +1,31 @@
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  position: relative;
 }
 
 .imageContainer {
   width: 90vw;
   height: 75vh;
   background: var(--demo-image-color);
+}
+
+.heroTextContainer {
+  position: absolute;
+  bottom: 5vh;
+  right: 0;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+}
+
+.heroText {
+  font-family: var(--headline-font);
+  font-size: var(--secondary-head-size);
+  color: var(--black);
+  text-align: center;
+  font-weight: 400;
 }

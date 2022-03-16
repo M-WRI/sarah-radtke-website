@@ -75,6 +75,13 @@
   --headline-font: "Crimson Pro";
   --text-font: "Nacelle";
   --navigation-font: "Antipasto Pro";
+  /* Sizes */
+  --main-head-size: 3rem;
+  --secondary-head-size: 2rem;
+  --bullet-point-size: 1.125rem;
+  --text-size: 1rem;
+  /* Shadow */
+  --box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
 }
 
 html,
