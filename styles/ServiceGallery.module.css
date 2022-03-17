@@ -1,0 +1,136 @@
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.galleryContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceGalleryList {
+  list-style: none;
+  min-width: 20rem;
+}
+
+.serviceGalleryItem {
+  display: flex;
+  align-items: center;
+  font-family: var(--text-font);
+  font-size: var(--secondary-head-size);
+  color: var(--primary-color-light);
+  cursor: pointer;
+}
+
+.serviceGalleryItem:hover + .line {
+  width: 60px;
+}
+
+.line {
+  height: 4px;
+  margin-right: 1rem;
+}
+
+.contentContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.contentImage {
+  flex: 1;
+  width: 500px;
+  height: 500px;
+  min-height: 500px;
+  background: var(--demo-image-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textBox {
+  flex: none;
+  position: relative;
+  left: -4rem;
+  max-width: 500px;
+  width: 50%;
+  padding: 1rem;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+}
+
+.textBoxHeadline {
+  font-family: var(--headline-font);
+  font-size: var(--secondary-head-size);
+  color: var(--black);
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.text {
+  font-family: var(--text-font);
+  color: var(--black);
+  line-height: 1.5;
+}
+
+@media (max-width: 990px) {
+  .container {
+    margin: 4rem 0;
+    height: unset;
+    display: flex;
+    align-items: center;
+  }
+
+  .galleryContainer {
+    flex-direction: column;
+  }
+
+  .serviceGalleryList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .serviceGalleryItem {
+    margin: 0.5rem;
+  }
+
+  .contentContainer {
+    flex-direction: column;
+  }
+
+  .contentImage {
+    flex: 1;
+    width: 100%;
+    height: 500px;
+    min-height: 500px;
+  }
+
+  .textBox {
+    top: -4rem;
+    right: -3rem;
+    left: unset;
+    width: 80%;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 425px) {
+  .contentImage {
+    flex: 1;
+    width: 100%;
+    height: 300px;
+    min-height: 300px;
+  }
+
+  .textBox {
+    top: 0rem;
+    right: 0rem;
+    width: 100%;
+    align-self: unset;
+  }
+}
