@@ -1,5 +1,5 @@
 .container {
-  height: 100vh;
+  padding: 10rem 2rem;
   display: flex;
   align-items: center;
 }
@@ -41,6 +41,8 @@
 }
 
 .contentImage {
+  position: relative;
+  right: -5rem;
   flex: 1;
   width: 500px;
   height: 500px;
@@ -54,7 +56,6 @@
 .textBox {
   flex: none;
   position: relative;
-  left: -4rem;
   max-width: 500px;
   width: 50%;
   padding: 1rem;
@@ -108,11 +109,11 @@
     width: 100%;
     height: 500px;
     min-height: 500px;
+    right: 0;
   }
 
   .textBox {
     top: -4rem;
-    right: -3rem;
     left: unset;
     width: 80%;
     align-self: flex-end;
