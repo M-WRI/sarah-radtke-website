@@ -1,5 +1,8 @@
 import Head from "next/head";
 import Hero from "../components/Hero";
+import PhotoText from "../components/PhotoText";
+import PreeFooter from "../components/PreeFooter";
+import SymptomBox from "../components/SymptomBox";
 
 const cmd = () => {
   const data = {
@@ -8,6 +11,53 @@ const cmd = () => {
       Die Abkürzung CMD steht für Craniomandibuläre Dysfunktion 
       und ist ein Überbegriff für Fehlregulationen und/ oder 
       Schmerzen der Muskel- und/oder Gelenkfunktion der Kiefergelenke.
+    `,
+
+    symptomTitle:
+      "die Beschwerden von CMD sind vielfältig und legen sich häufig chronisch aus. Zu den Symptomen gehören:",
+    symptomList: [
+      { id: 1, title: "Schmerzen im Bereich des Kiefergelenks" },
+      { id: 2, title: "Fehlbiss" },
+      { id: 3, title: "Pressen, Knirschen" },
+      { id: 4, title: "Ausstrahlungen im Ober- und Unterkiefer" },
+      { id: 5, title: "Zahnschmerzen" },
+      {
+        id: 6,
+        title: "Schmerzen im Bereich der Ohren, Ohrgeräusche, Tinnitus",
+      },
+      { id: 7, title: "Taubheitsgefühl im Gesichtsbereich" },
+      {
+        id: 8,
+        title:
+          "Kopfschmerzen, Migräne Druckgefühl im Hinterkopf und Schläfenbereich",
+      },
+      { id: 9, title: "Kloßgefühl im Hals, Schluckbeschwerden" },
+      { id: 10, title: "Beschwerden der Nasennebenhöhlen" },
+      {
+        id: 11,
+        title:
+          "Verspannungen, Schmerzen im Hals-, Brustwirbel- und Schulterbereich",
+      },
+      {
+        id: 12,
+        title: "Rückenschmerzen • Schlafstörungen, Konzentrationsschwäche",
+      },
+    ],
+
+    photoTitle: "CMD-Behandlung",
+    photoText: `
+    Die frühzeitige Feststellung der Diagnose CMD ist
+    wichtig und umfasst eine enge Zusammenarbeit zwischen
+    mehren Fachärzten und Therapeuten, wie Zahnärzten, 
+    Kieferorthopäden, HNO-Ärzten, Physiotherapeuten 
+    (spezialisiert in CMD) und Logopäden.
+    In angenehmer Atmosphäre werden Sie in meiner Praxis behandelt und 
+    ich gehe individuell auf die verschiedenen Bedürfnisse jedes 
+    einzelnen Patienten ein.Zu Beginn mache ich eine ausführliche 
+    Anamnese und Befunderhebung, anschließend wird ein 
+    individueller Behandlungsplan erstellt, wobei manuelle 
+    Techniken, speziell CMD- Therapie, Massagetechniken, 
+    Wärmetherapie und ggf. auch Akupunktur angewendet wird.
     `,
   };
   return (
@@ -18,6 +68,9 @@ const cmd = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero title={data.heroTitle} text={data.heroText} />
+      <SymptomBox headline={data.symptomTitle} list={data.symptomList} />
+      <PhotoText headline={data.photoTitle} text={data.photoText} />
+      <PreeFooter site="CMD" />
     </div>
   );
 };
