@@ -1,5 +1,5 @@
 .container {
-  padding: 10rem 0 1rem 0;
+  padding: 5rem 0 5rem 0;
   background: var(--primary-color-light);
 }
 
@@ -9,6 +9,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-items: end;
   grid-gap: 2rem;
   text-align: center;
   line-height: 1.5;
@@ -17,9 +18,9 @@
   color: var(--black);
 }
 
-.addressInfoContainer {
+/* .addressInfoContainer {
   transform: translateY(-90px);
-}
+} */
 
 .addressInfoContainer span {
   line-height: 1.5;

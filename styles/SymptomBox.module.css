@@ -1,0 +1,51 @@
+.sectionThreeContainer {
+  padding: 10rem 0;
+  background: var(--primary-color-light);
+}
+
+.contentContainer {
+  padding: 0 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.sectionHeadline {
+  font-family: var(--headline-font);
+  font-size: var(--main-head-size);
+  color: var(--black);
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sectionText {
+  font-family: var(--text-font);
+  font-size: var(--text-size);
+  color: var(--black);
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.listContainer {
+  text-align: center;
+}
+
+.listItem {
+  font-size: var(--secondary-head-size);
+  color: var(--headline-font);
+  color: var(--black);
+  transition: all 0.5s;
+  display: inline;
+}
+
+.listItem:hover {
+  font-size: var(--main-head-size);
+  transition: all 0.5s;
+}
+
+@media (max-width: 450px) {
+  .bulletPointsContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
