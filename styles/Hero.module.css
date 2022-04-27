@@ -16,16 +16,50 @@
 .heroTextContainer {
   position: absolute;
   bottom: 5vh;
+  right: 5rem;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  max-width: 480px;
+}
+
+.heroTextContainerIndex {
+  position: absolute;
+  bottom: 5vh;
   right: 0;
   background: var(--white);
   box-shadow: var(--box-shadow);
   padding: 2rem;
 }
 
-.heroText {
+.heroTitleIndex {
   font-family: var(--headline-font);
   font-size: var(--secondary-head-size);
   color: var(--black);
   text-align: center;
   font-weight: 400;
+}
+
+.heroTitle {
+  font-family: var(--headline-font);
+  font-size: var(--main-head-size);
+  color: var(--black);
+  text-align: center;
+  font-weight: 400;
+}
+
+.heroText {
+  font-family: var(--text-font);
+  font-size: var(--text-size);
+  color: var(--black);
+  line-height: 1.5;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .heroTextContainer {
+    right: 0;
+    max-width: 100%;
+  }
 }

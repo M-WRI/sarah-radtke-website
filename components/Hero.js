@@ -1,13 +1,26 @@
 import styles from "../styles/Hero.module.css";
 
-const Hero = ({ img, text }) => {
+const Hero = ({ img, text, title, site }) => {
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}></div>
-      <div className={styles.heroTextContainer}>
-        <h1 className={styles.heroText}>
-          Privatpraxis für Physiotherapie, Manuelle Therapie und Akupunktur
-        </h1>
+      <div
+        className={
+          site === "index"
+            ? styles.heroTextContainerIndex
+            : styles.heroTextContainer
+        }
+      >
+        {title && (
+          <h1
+            className={
+              site === "index" ? styles.heroTitleIndex : styles.heroTitle
+            }
+          >
+            {title}
+          </h1>
+        )}
+        {text && <p className={styles.heroText}>{text}</p>}
       </div>
     </div>
   );
