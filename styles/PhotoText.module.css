@@ -24,6 +24,14 @@
   font-size: var(--text-size);
   color: var(--black);
   line-height: 1.5;
+  margin-bottom: 2.5rem;
+}
+
+.link {
+  font-family: var(--text-font);
+  font-size: var(--text-size);
+  font-weight: bold;
+  color: var(--secondary-color-dark);
 }
 
 @media (max-width: 830px) {

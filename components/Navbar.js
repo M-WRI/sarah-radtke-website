@@ -5,9 +5,11 @@ import styles from "../styles/Navbar.module.css";
 
 const Navbar = () => {
   const data = [
-    { id: 1, title: "Akupunktur" },
-    { id: 2, title: "Physiotherapie" },
-    { id: 3, title: "Manuelle Therapie" },
+    { id: 1, title: "CMD" },
+    { id: 2, title: "Manuelle Therapie" },
+    { id: 3, title: "Massage" },
+    { id: 4, title: "Akupunktur" },
+    { id: 5, title: "Über Mich" },
   ];
 
   return (

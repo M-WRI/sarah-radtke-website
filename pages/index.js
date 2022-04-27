@@ -34,6 +34,21 @@ export default function Home() {
     ],
   };
 
+  const personalData = {
+    headline: "Sarah Radtke",
+    text: `
+    Mein Name ist Sarah Radtke. Ich wurde 1983 in Köln geboren, bin
+    verheiratet und lebe mit meinen 2 Kindern und meinem Mann seit 2004
+    in Hamburg. Nach meinen Studium der Zahnmedizin an der Uniklinik
+    Eppendorf folgten eine Physiotherapieausbildung und weitere
+    Qualifikationen und Fortbildungen in den Bereichen Lymphdrainage,
+    Rückentraining, Kiefergelenkbehandlungen (CMD) und Manuelle
+    Therapie. Heilpraktiker- und Akupunkturausbildung (Spezalisiert bei
+    Kinderwunsch)
+    `,
+    slug: "#",
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -44,8 +59,12 @@ export default function Home() {
       <Hero />
       <ServiceGallery />
       <SymptomBox headline={data.headline} text={data.text} list={data.list} />
-      <PhotoText />
-      <PreeFooter />
+      <PhotoText
+        headline={personalData.headline}
+        text={personalData.text}
+        slug={personalData.slug}
+      />
+      <PreeFooter site="index" />
     </div>
   );
 }

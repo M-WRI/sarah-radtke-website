@@ -1,10 +1,12 @@
 import styles from "../styles/PreFooter.module.css";
+import Overview from "./Overview";
 
-const PreeFooter = () => {
+const PreeFooter = ({ site }) => {
   const data = [
-    { id: 1, title: "Akupunktur", img: "1" },
-    { id: 2, title: "Physiotherapie", img: "2" },
-    { id: 3, title: "Manuelle Therapie", img: "3" },
+    { id: 1, title: "CMD", img: "1" },
+    { id: 2, title: "Manuelle Therapie", img: "2" },
+    { id: 3, title: "Massage", img: "3" },
+    { id: 4, title: "Akupunktur", img: "4" },
   ];
   return (
     <section className={styles.container}>
@@ -30,16 +32,7 @@ const PreeFooter = () => {
           </div>
         </div>
       </div>
-      <div className={styles.sectionTwo}>
-        <h2 className={styles.headline}>Das Angebot im Überblick</h2>
-        <div className={styles.gallery}>
-          {data.map((el) => (
-            <div key={el.id} className={styles.imageWrapper}>
-              <h3 className={styles.imgTitle}>{el.title}</h3>
-            </div>
-          ))}
-        </div>
-      </div>
+      <Overview offer={data} site={site} />
     </section>
   );
 };
