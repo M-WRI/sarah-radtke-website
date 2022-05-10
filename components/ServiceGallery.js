@@ -1,11 +1,16 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import styles from "../styles/ServiceGallery.module.css";
 
 const ServiceGallery = () => {
   const [hoverState, setHoverState] = useState(0);
   const [linkActive, setLinkActive] = useState(1);
+
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
 
   const data = [
     {
@@ -51,7 +56,33 @@ const ServiceGallery = () => {
     linkOff: {
       color: "#dfd6c5",
     },
+    image: {
+      y: "0%",
+      transition: {
+        ease: [0.7, 0.135, 0.235, 0.99],
+        duration: 1.8,
+      },
+    },
+    contentBox: {
+      y: "0%",
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        ease: [0.7, 0.135, 0.235, 0.99],
+        duration: 1,
+      },
+    },
   };
+
+  const imgCtrl = useAnimation();
+  const boxCtrl = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      imgCtrl.start("image");
+      boxCtrl.start("contentBox");
+    }
+  }, [inView, imgCtrl, boxCtrl]);
 
   return (
     <div className={styles.container}>
@@ -83,12 +114,26 @@ const ServiceGallery = () => {
             </motion.li>
           ))}
         </ul>
-        <div className={styles.contentContainer}>
-          <div className={styles.contentImage}>{linkData.img}</div>
-          <div className={styles.textBox}>
+        <div ref={ref} className={styles.contentContainer}>
+          <div className={styles.contentImage}>
+            <motion.div
+              initial={{ y: "100%" }}
+              variants={animation}
+              animate={imgCtrl}
+              className={styles.image}
+            >
+              {linkData.img}
+            </motion.div>
+          </div>
+          <motion.div
+            initial={{ y: "100%", opacity: 0 }}
+            variants={animation}
+            animate={boxCtrl}
+            className={styles.textBox}
+          >
             <h2 className={styles.textBoxHeadline}>{linkData.title}</h2>
             <p className={styles.text}>{linkData.text}</p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
