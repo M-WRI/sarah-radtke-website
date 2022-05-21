@@ -1,6 +1,10 @@
 .sectionThreeContainer {
-  padding: 10rem 0;
+  overflow: hidden;
+}
+
+.bg {
   background: var(--primary-color-light);
+  padding: 10rem 0;
 }
 
 .contentContainer {
@@ -39,7 +43,6 @@
 }
 
 .listItem:hover {
-  font-weight: bold;
   font-size: 2.3rem;
   transition: all 0.5s;
 }
