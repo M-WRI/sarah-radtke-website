@@ -82,23 +82,27 @@ const SymptomBox = ({ text, headline, list }) => {
               initial={{ opacity: 0 }}
               variants={animation}
               animate={textCtrl}
+              style={{
+                margin: !list && 0,
+              }}
             >
               {text}
             </motion.p>
           )}
           <div className={styles.listContainer}>
-            {list.map((item) => (
-              <motion.span
-                className={styles.listItem}
-                key={item.id}
-                custom={item.id}
-                initial={{ opacity: 0 }}
-                variants={animation}
-                animate={listCtrl}
-              >
-                • {item.title}{" "}
-              </motion.span>
-            ))}
+            {list &&
+              list.map((item) => (
+                <motion.span
+                  className={styles.listItem}
+                  key={item.id}
+                  custom={item.id}
+                  initial={{ opacity: 0 }}
+                  variants={animation}
+                  animate={listCtrl}
+                >
+                  • {item.title}{" "}
+                </motion.span>
+              ))}
           </div>
         </div>
       </motion.div>

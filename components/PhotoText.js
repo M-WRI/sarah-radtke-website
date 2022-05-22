@@ -10,7 +10,9 @@ const PhotoText = ({ img, headline, text, slug, invert = false }) => {
   const [innerHeight, setInnerHeight] = useState();
   const [offsetY, setOffsetY] = useState();
 
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({
+    threshold: 1,
+  });
 
   const handleScroll = () =>
     setOffsetY(reference.current.getBoundingClientRect().top);
