@@ -9,6 +9,7 @@ import PreeFooter from "../components/PreeFooter";
 import SymptomBox from "../components/SymptomBox";
 
 export default function Home() {
+  console.log(data, "<---");
   return (
     <div>
       <Head>
@@ -21,7 +22,7 @@ export default function Home() {
       <SymptomBox
         headline={data.symptomData.headline}
         text={data.symptomData.text}
-        list={data.symptomData.list}
+        list={data.list}
       />
       <PhotoText
         headline={data.personalData.headline}

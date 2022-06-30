@@ -1,6 +1,5 @@
 import Head from "next/head";
 import React from "react";
-import Headline from "../components/Headline";
 import Hero from "../components/Hero";
 import PhotoText from "../components/PhotoText";
 import PreeFooter from "../components/PreeFooter";
@@ -99,7 +98,7 @@ const massage = () => {
       </Head>
       <Hero title={data.heroTitle} text={data.heroText} />
       <SymptomBox headline={data.symptomTitle} list={data.symptomList} />
-      <Headline headline={data.headline} />
+      {/* <Headline headline={data.headline} /> */}
       {data.photoTextList.map((item) => (
         <PhotoText
           key={item.id}

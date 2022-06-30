@@ -1,13 +1,28 @@
 .headlineContainer {
-  font-family: var(--headline-font);
   color: var(--black);
 }
 
+.secondary {
+  font-family: var(--text-font);
+}
+
+.primary {
+  font-family: var(--headline-font);
+}
+
+.headWrapper {
+  display: inline-block;
+}
+
 .h1 {
+  position: relative;
+  z-index: 2;
   font-size: var(--main-head-size);
 }
 
 .h2 {
+  position: relative;
+  z-index: 2;
   font-size: var(--secondary-head-size);
 }
 
@@ -17,4 +32,11 @@
 
 .mb {
   margin-bottom: 1rem;
+}
+
+.line {
+  transform: translate(-2.5%, 200%);
+  width: 105%;
+  height: 20px;
+  background-color: var(--secondary-color-light);
 }

@@ -2,46 +2,19 @@ import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-// styles
+// Animation
+import { animation } from "../animation/symptomBox.animation";
+// Components
+import { Headline } from "./headline.component";
+import { Text } from "./text.component";
+import { List } from "./list.component";
+// Styles
 import styles from "../styles/SymptomBox.module.scss";
 
 const SymptomBox = ({ text, headline, list }) => {
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
-
-  const animation = {
-    bg: {
-      y: 0,
-      transition: {
-        ease: [0.7, 0.135, 0.235, 0.99],
-        duration: 1,
-      },
-    },
-    head: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.8,
-        ease: [0.7, 0.135, 0.235, 0.99],
-        duration: 0.5,
-      },
-    },
-    text: {
-      opacity: 1,
-      transition: {
-        delay: 1.1,
-        ease: [0.7, 0.135, 0.235, 0.99],
-        duration: 0.5,
-      },
-    },
-    item: (i) => ({
-      opacity: 1,
-      transition: {
-        delay: !text ? 1.1 + i * 0.1 : 1.3 + i * 0.1,
-      },
-    }),
-  };
 
   const bgCtrl = useAnimation();
   const headCtrl = useAnimation();
@@ -65,7 +38,21 @@ const SymptomBox = ({ text, headline, list }) => {
         variants={animation}
         animate={bgCtrl}
       >
-        <div className={styles.contentContainer}>
+        <Headline center secondary mb>
+          {headline}
+        </Headline>
+        <Text center>{text}</Text>
+        <List data={list} />
+      </motion.div>
+    </section>
+  );
+};
+
+export default SymptomBox;
+
+/*
+
+   <div className={styles.contentContainer}>
           {headline && (
             <motion.h2
               className={styles.sectionHeadline}
@@ -96,18 +83,14 @@ const SymptomBox = ({ text, headline, list }) => {
                   className={styles.listItem}
                   key={item.id}
                   custom={item.id}
-                  initial={{ opacity: 0 }}
+                  initial={{ opacity: 1 }}
                   variants={animation}
                   animate={listCtrl}
                 >
-                  • {item.title}{" "}
+                  • {item.title}
                 </motion.span>
               ))}
           </div>
         </div>
-      </motion.div>
-    </section>
-  );
-};
 
-export default SymptomBox;
+*/

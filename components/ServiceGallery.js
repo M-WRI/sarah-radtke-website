@@ -78,7 +78,9 @@ export const ServiceGallery = () => {
             animate={boxCtrl}
             className={styles.textBox}
           >
-            <Headline mb>{linkData.title}</Headline>
+            <Headline mb underline>
+              {linkData.title}
+            </Headline>
             <Text>{linkData.text}</Text>
           </motion.div>
         </div>
