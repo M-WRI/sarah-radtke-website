@@ -3,7 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 // styles
-import styles from "../styles/SymptomBox.module.css";
+import styles from "../styles/SymptomBox.module.scss";
 
 const SymptomBox = ({ text, headline, list }) => {
   const { ref, inView } = useInView({

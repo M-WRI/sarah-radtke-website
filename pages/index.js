@@ -4,7 +4,7 @@ import PhotoText from "../components/PhotoText";
 import PreeFooter from "../components/PreeFooter";
 import ServiceGallery from "../components/ServiceGallery";
 import SymptomBox from "../components/SymptomBox";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 
 export default function Home() {
   const heroData = {

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-import styles from "../styles/ServiceGallery.module.css";
+import styles from "../styles/ServiceGallery.module.scss";
 
 const ServiceGallery = () => {
   const [hoverState, setHoverState] = useState(0);

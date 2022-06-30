@@ -1,4 +1,4 @@
-import styles from "../styles/Overview.module.css";
+import styles from "../styles/Overview.module.scss";
 
 const Overview = ({ offer, site }) => {
   const filteredOffer = offer.filter((item) => item.title !== site);

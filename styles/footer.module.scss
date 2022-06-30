@@ -11,29 +11,16 @@
   grid-template-columns: repeat(3, 1fr);
   align-items: end;
   grid-gap: 2rem;
-  text-align: center;
-  line-height: 1.5;
-  font-family: var(--text-font);
-  font-size: var(--text-size);
-  color: var(--black);
 }
 
-/* .addressInfoContainer {
-  transform: translateY(-90px);
-} */
-
-.addressInfoContainer span {
-  line-height: 1.5;
+.addressInfoContainer {
+  .address {
+    text-align: center;
+    line-height: 1.5;
+  }
 }
 
-.headline {
-  font-family: var(--headline-font);
-  font-size: var(--main-head-size);
-  color: var(--black);
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 900px) {
+@media (max-width: 1075px) {
   .contentWrapper {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -43,7 +30,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 710px) {
   .container {
     padding: 3rem 0 3rem 0;
     background: var(--primary-color-light);

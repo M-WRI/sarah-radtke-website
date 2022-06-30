@@ -3,7 +3,7 @@ import Link from "next/link";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-import styles from "../styles/PhotoText.module.css";
+import styles from "../styles/PhotoText.module.scss";
 
 const PhotoText = ({ img, headline, text, slug, invert = false }) => {
   const reference = useRef(null);

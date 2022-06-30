@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-import styles from "../styles/Hero.module.css";
+import styles from "../styles/Hero.module.scss";
 
 const Hero = ({ img, text, title, site }) => {
   const { ref, inView } = useInView();

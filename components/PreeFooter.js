@@ -1,4 +1,4 @@
-import styles from "../styles/PreFooter.module.css";
+import styles from "../styles/PreFooter.module.scss";
 import Overview from "./Overview";
 
 const PreeFooter = ({ site }) => {
