@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+// Data
+import data from "../data/serviceGallery.data.json";
+// Components
+import { Headline } from "./headline.component";
+import { Text } from "./text.component";
+// Animations
+import { animation } from "../animation/serviceGallery.animation";
+// Styles
+import styles from "../styles/serviceGallery.module.scss";
 
-import styles from "../styles/ServiceGallery.module.scss";
-
-const ServiceGallery = () => {
+export const ServiceGallery = () => {
   const [hoverState, setHoverState] = useState(0);
   const [linkActive, setLinkActive] = useState(1);
 
@@ -12,67 +19,7 @@ const ServiceGallery = () => {
     threshold: 0.5,
   });
 
-  const data = [
-    {
-      id: 1,
-      title: "CMD",
-      text: "Die Abkürzung CMD steht für Craniomandibuläre Dysfunktion und ist ein Überbegriff für Fehlregulationen und/ oder Schmerzen der Muskel- und/oder Gelenkfunktion der Kiefergelenke.",
-      img: "1",
-    },
-    {
-      id: 2,
-      title: "Manuelle Therapie",
-      text: "Das Maitland-Konzept beschäftigt sich mit der Befunderhebung und Behandlung von Funktionsstörungen im Gelenk-, Muskel- und Nervensystem mit speziellen Manual- und Mobilisationstechniken, neurodynamische Techniken, Muskeldehnungen, stabilisierende Übungen und Heimprogramme. Durch diese Techniken können Schmerzen gelindert und Bewegungseinschränkungen behoben werden.",
-      img: "2",
-    },
-    {
-      id: 3,
-      title: "Massage",
-      text: "Die Massagetherapie ist eine der bekanntesten und ältesten Heilmethoden und entstand aus einer griechisch-römischen Tradition. Sie wird bis heute in vielen verschieden Bereichen eingesetzt.",
-      img: "3",
-    },
-    {
-      id: 4,
-      title: "Akupunktur",
-      text: "Akupunktur ist eine jahrtausendealte Behandlungsmethode aus China, entstammt der traditionellen chinesischen Medizin (TCM), bei der eine therapeutische Wirkung durch Nadelstiche an bestimmten Punkten des Körpers erzielt wird.",
-      img: "4",
-    },
-  ];
-
   let linkData = data.find((el) => el.id === linkActive);
-
-  const animation = {
-    lineHover: {
-      width: 25,
-      transition: { bounce: 0, ease: "easeOut", duration: 0.3 },
-    },
-    lineOff: {
-      width: 0,
-      transition: { bounce: 0, ease: "easeOut", duration: 0.3 },
-    },
-    linkActive: {
-      color: "#cbbb9f",
-    },
-    linkOff: {
-      color: "#dfd6c5",
-    },
-    image: {
-      y: "0%",
-      transition: {
-        ease: [0.7, 0.135, 0.235, 0.99],
-        duration: 1,
-      },
-    },
-    contentBox: {
-      y: "0%",
-      opacity: 1,
-      transition: {
-        delay: 0.3,
-        ease: [0.7, 0.135, 0.235, 0.99],
-        duration: 0.6,
-      },
-    },
-  };
 
   const imgCtrl = useAnimation();
   const boxCtrl = useAnimation();
@@ -131,13 +78,11 @@ const ServiceGallery = () => {
             animate={boxCtrl}
             className={styles.textBox}
           >
-            <h2 className={styles.textBoxHeadline}>{linkData.title}</h2>
-            <p className={styles.text}>{linkData.text}</p>
+            <Headline mb>{linkData.title}</Headline>
+            <Text>{linkData.text}</Text>
           </motion.div>
         </div>
       </div>
     </div>
   );
 };
-
-export default ServiceGallery;

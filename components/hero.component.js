@@ -7,7 +7,7 @@ import { Text } from "./text.component";
 // Animation
 import { animation } from "../animation/hero.animation";
 
-import styles from "../styles/Hero.module.scss";
+import styles from "../styles/hero.module.scss";
 
 export const Hero = ({ img, text, title, site }) => {
   const { ref, inView } = useInView();

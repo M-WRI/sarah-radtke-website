@@ -3,9 +3,9 @@ import data from "../data/index.data.json";
 // Components
 import Head from "next/head";
 import { Hero } from "../components/hero.component";
+import { ServiceGallery } from "../components/serviceGallery";
 import PhotoText from "../components/PhotoText";
 import PreeFooter from "../components/PreeFooter";
-import ServiceGallery from "../components/ServiceGallery";
 import SymptomBox from "../components/SymptomBox";
 
 export default function Home() {
