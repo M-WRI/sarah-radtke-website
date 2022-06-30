@@ -5,29 +5,20 @@
   align-items: center;
   height: 100vh;
   position: relative;
-}
+  max-width: 1280px;
+  margin: 0 auto;
 
-.imageContainer {
-  width: 90vw;
-  height: 75vh;
-  background: var(--image-bg-color);
-  overflow: hidden;
-}
+  .imageContainer {
+    height: 75vh;
+    background: var(--image-bg-color);
+    overflow: hidden;
 
-.image {
-  width: 100%;
-  height: 100%;
-  background: var(--demo-image-color);
-}
-
-.heroTextContainer {
-  position: absolute;
-  bottom: 5vh;
-  right: 5rem;
-  background: var(--white);
-  box-shadow: var(--box-shadow);
-  padding: 2rem;
-  max-width: 480px;
+    .image {
+      width: 100%;
+      height: 100%;
+      background: var(--demo-image-color);
+    }
+  }
 }
 
 .heroTextContainerIndex {

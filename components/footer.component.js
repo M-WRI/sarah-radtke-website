@@ -11,7 +11,7 @@ export const Footer = () => {
     <footer className={styles.container}>
       <div className={styles.contentWrapper}>
         <div className={styles.addressInfoContainer}>
-          <Headline className={styles.headline} center>
+          <Headline className={styles.headline} center mb>
             Sarah Radtke
           </Headline>
           <Text center>{data.address.info}</Text>

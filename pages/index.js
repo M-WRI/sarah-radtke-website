@@ -2,7 +2,7 @@
 import data from "../data/index.data.json";
 // Components
 import Head from "next/head";
-import Hero from "../components/Hero";
+import { Hero } from "../components/hero.component";
 import PhotoText from "../components/PhotoText";
 import PreeFooter from "../components/PreeFooter";
 import ServiceGallery from "../components/ServiceGallery";

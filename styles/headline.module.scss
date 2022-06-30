@@ -1,7 +1,6 @@
 .headlineContainer {
   font-family: var(--headline-font);
   color: var(--black);
-  margin-bottom: 1rem;
 }
 
 .h1 {
@@ -14,4 +13,8 @@
 
 .center {
   text-align: center;
+}
+
+.mb {
+  margin-bottom: 1rem;
 }

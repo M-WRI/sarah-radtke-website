@@ -1,5 +1,7 @@
 {
-  "heroData": "Privatpraxis für Physiotherapie, Manuelle Therapie und Akupunktur",
+  "heroData": {
+    "title": "Privatpraxis für Physiotherapie, Manuelle Therapie und Akupunktur"
+  },
   "symptomData": {
     "headline": "Sie leiden an folgenden Symptomen?",
     "text": "Jedes Krankheitsbild ist bei jedem Menschen verschieden. Schmerzen können viele Ursachen haben. Daher geht es mir bei jeder Behandlung um die ganz eigenen Bedürfnisse der Patient*innen, jede Behandlung ist individuell und dauert mindestens eine Stunde.Denn in der Therapie benötigt man eine gewisse Zeit, um sich in den Menschen hineinzufühlen. Das erreicht man nicht in 20 Minuten, wie es in vielen Praxen läuft. Jede Behandlung beginnt mit einer ausführlichen (professionellen) Anamnese und Befundung mit hoher Qualität."

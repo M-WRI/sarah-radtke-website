@@ -1,7 +1,7 @@
 // Styles
 import styles from "../styles/headline.module.scss";
 
-export const Headline = ({ children, type, center = false }) => {
+export const Headline = ({ children, type, center = false, mb = false }) => {
   const headSwitch = (type) => {
     switch (type) {
       case "h1":
@@ -9,7 +9,7 @@ export const Headline = ({ children, type, center = false }) => {
           <h1
             className={`${styles.headlineContainer} ${styles.h1} ${
               center && styles.center
-            }`}
+            } ${mb && styles.mb}`}
           >
             {children}
           </h1>
@@ -19,7 +19,7 @@ export const Headline = ({ children, type, center = false }) => {
           <h2
             className={`${styles.headlineContainer} ${styles.h2} ${
               center && styles.center
-            }`}
+            } ${mb && styles.mb}`}
           >
             {children}
           </h2>
@@ -29,7 +29,7 @@ export const Headline = ({ children, type, center = false }) => {
           <h2
             className={`${styles.headlineContainer} ${styles.h2} ${
               center && styles.center
-            }`}
+            } ${mb && styles.mb}`}
           >
             {children}
           </h2>

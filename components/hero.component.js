@@ -1,39 +1,16 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+// Components
+import { Headline } from "./headline.component";
+import { Text } from "./text.component";
+// Animation
+import { animation } from "../animation/hero.animation";
 
 import styles from "../styles/Hero.module.scss";
 
-const Hero = ({ img, text, title, site }) => {
+export const Hero = ({ img, text, title, site }) => {
   const { ref, inView } = useInView();
-
-  const animation = {
-    imageContainer: {
-      width: "90vw",
-      transition: {
-        delay: 0.5,
-        ease: [0.7, 0.135, 0.235, 0.99],
-        duration: 2.4,
-      },
-    },
-    image: {
-      y: 0,
-      transition: {
-        delay: 0.5,
-        ease: [0.7, 0.135, 0.235, 0.99],
-        duration: 1.2,
-      },
-    },
-    textContainer: {
-      opacity: 1,
-      y: "0%",
-      transition: {
-        delay: 0.8,
-        ease: [0.7, 0.135, 0.235, 0.99],
-        duration: 1.2,
-      },
-    },
-  };
 
   const imgConCtrl = useAnimation();
   const imgCtrl = useAnimation();
@@ -50,7 +27,7 @@ const Hero = ({ img, text, title, site }) => {
   return (
     <div ref={ref} className={styles.container}>
       <motion.div
-        initial={{ width: "100vw" }}
+        initial={{ width: "100%" }}
         variants={animation}
         animate={imgConCtrl}
         className={styles.imageContainer}
@@ -73,18 +50,12 @@ const Hero = ({ img, text, title, site }) => {
         }
       >
         {title && (
-          <h1
-            className={
-              site === "index" ? styles.heroTitleIndex : styles.heroTitle
-            }
-          >
+          <Headline center mb={text && true}>
             {title}
-          </h1>
+          </Headline>
         )}
-        {text && <p className={styles.heroText}>{text}</p>}
+        {text && <Text>{text}</Text>}
       </motion.div>
     </div>
   );
 };
-
-export default Hero;
